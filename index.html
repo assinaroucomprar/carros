@@ -97,8 +97,19 @@
             margin-bottom: 10px;
             text-align: center;
         }
+        #youtube-videos {
+            display: flex;
+            flex-direction: column; /* Para empilhar os vídeos verticalmente */
+            align-items: center; /* Alinha os itens horizontalmente ao centro */
+            justify-content: center; /* Alinha os itens verticalmente ao centro (útil se você definir uma altura para o container) */
+            margin: auto; /* Para centralizar o container na página */
+            max-width: 800px; /* Defina uma largura máxima para o container */
+        }
         #youtube-videos iframe {
-            margin: 15px;
+            margin: 15px 0;
+            width: 100%;
+            max-width: 560px;
+            height: auto;
             display: block; /* Ou 'inline-block' se você quiser que fiquem lado a lado */
         }
     </style>
@@ -312,6 +323,7 @@
         <iframe width="560" height="315" src="https://www.youtube.com/embed/tOQmg4aBqi4?si=4NMz83HqCQtBzOtC&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/nC45mBOGyR0?si=8bTUvKLrztSDvEWB&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/W1vF84mA2jM?si=EWHB1r_ZwIyv-ErQ&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/hrkw4ZlVCEI?si=SgH3Vl1PULjUpfoT&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         <!-- Adicione mais iframes conforme necessário, substituindo VIDEO_ID pelo ID real do vídeo do YouTube -->
     </div>
 
