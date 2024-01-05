@@ -152,28 +152,28 @@
             <div class="results-container">
                 <div class="column">
                     <div class="column-header">Compra</div>
-                    <p>Valor Total Compra Financiada: ${valorTotalCompra.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p>
+                    <p>Valor Total Compra Financiada:</p> <p>${valorTotalCompra.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p>
                     <div class="explanation">Valor pago pelo veículo somado dos custos anuais de IPVA, Licenciamento e manutenção, subtraído do valor de venda após o período.</div>
-                    <p>Valor Parcela Financiamento: ${valorParcela.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p>
+                    <p>Valor Parcela Financiamento:</p> <p>${valorParcela.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p>
                     <div class="explanation">Valor mensal que será pago pelo financiamento.</div>
-                    <p>Valor Venda do veículo: ${valorVendaVeiculo.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p>
+                    <p>Valor Venda do veículo:</p> <p>${valorVendaVeiculo.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p>
                     <div class="explanation">Valor estimado de venda do veículo após o período de uso.</div>
                 </div>
                 
                 <div class="column">
                     <div class="column-header">Assinatura</div>
-                    <p>Valor Total Assinatura sem descontar investimento: ${custoAluguel.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p>
+                    <p>Valor Total Assinatura sem descontar investimento:</p> <p>${custoAluguel.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p>
                     <div class="explanation">Valor total gasto em parcelas mensais do aluguel.</div>
-                    <p>Valor Total Assinatura descontando investimento: ${(valorTotalAssinatura - valorFuturoEntrada).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p>
+                    <p>Valor Total Assinatura descontando investimento:</p> <p>${(valorTotalAssinatura - valorFuturoEntrada).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p>
                     <div class="explanation">Valor que terá realmente pago em aluguel caso invista os valores acima.</div>
                 </div>
                 
                 <div class="column">
                     <div class="column-header">Investimento</div>
-                    <p>Valor Final Investimento Entrada: ${valorFuturoEntrada.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p>
+                    <p>Valor Final Investimento Entrada:</p> <p>${valorFuturoEntrada.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p>
                     <div class="explanation">Valor total que terá se investir o valor que daria de entrada no veículo financiado. 
                     Este valor é o equivalente da entrada do financiamento, investido uma única vez no início do contrato de aluguel.</div>
-                    <p>Valor Final Investimento Custos extras: ${retornoInvestimentoCustosExtras.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p>
+                    <p>Valor Final Investimento Custos extras:</p> <p>${retornoInvestimentoCustosExtras.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p>
                     <div class="explanation">Valor total que terá ao final do período se investir o valor que gastaria em IPVA, licenciamento e manutenções do veículo comprado. Este valor é o total dividido por 12 e investido mensalmente.</div>
                 </div>
             </div>
