@@ -105,7 +105,7 @@
             !valorEntrada || valorEntrada <= 0 ||
             !valorMensalAluguel || valorMensalAluguel <= 0 ||
             !periodos || periodos <= 0 ||
-            !taxaJurosMensal || taxaJurosMensal <= 0) {
+            !taxaJurosMensal || taxaJurosMensal < 0) {
             alert("Por favor, insira valores numéricos maiores que zero.");
             return; // Interrompe a execução da função
         }
@@ -223,6 +223,11 @@
         <div class="explanation">É melhor comprar financiado ou Assinar um carro?</div>
         </center>
 
+        <center><h3>
+        <div class="explanation">Para Compra a Vista coloque o valor total do Veículo no campo entrada e taxa 0</div>
+        </center>
+        </h3>
+
         <label for="valorVeiculo">Valor FIPE do veículo:</label>
         <input type="number" id="valorVeiculo" min="0.01">
 
@@ -236,8 +241,13 @@
         <input type="number" id="periodos" min="1">
 
         <label for="taxaJurosMensal">Taxa de juros mensal:</label>
-        <input type="number" id="taxaJurosMensal" min="0.001">
+        <input type="number" id="taxaJurosMensal" min="0">
 
+        <center><h3>
+        <div class="explanation">Taxa de Juros basica do investimento em 0.5% ao mês</div>
+        </center>
+        </h3>
+        
         <label for="incluirTaxas" class="checkbox">
             <input type="checkbox" id="incluirTaxas">
             Investir valor das taxas?
