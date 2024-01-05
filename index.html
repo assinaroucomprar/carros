@@ -73,6 +73,26 @@
             margin: 5px 0 20px;
             font-size: 0.9em;
         }
+                .results-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .column {
+            flex: 1; /* Cada coluna terá espaço igual */
+            margin: 0 10px; /* Adiciona um pouco de espaço entre as colunas */
+            background-color: #f9f9f9; /* Cor de fundo para cada coluna */
+            padding: 10px;
+            border-radius: 4px; /* Bordas arredondadas para a coluna */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidade */
+        }
+
+        .column-header {
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-align: center;
+        }
     </style>
     <script>
     // Função de cálculo principal
@@ -125,25 +145,40 @@
         let custoFinanciamentoIgualar = custoAluguel - custosExtrasCarroFinanciado + valorVendaVeiculo;
         // ... Continue com os cálculos conforme necessário
 
+
         // Exibindo os resultados
         let resultadoDiv = document.getElementById('resultado');
         resultadoDiv.innerHTML = `
-            <p>Valor Total Compra Financiada: ${valorTotalCompra.toFixed(2)}</p>
-            <div class="explanation">Valor pago pelo veiculo somado dos custos anuais de IPVA, Licenciamento e manutenção, 
-                subtraido do valor de venda após o período.</div>
-            <p>Valor Venda do veiculo: ${valorVendaVeiculo.toFixed(2)}</p>    
-            <p>Valor Parcela Financiamento: ${valorParcela.toFixed(2)}</p>
-            <p>Valor Total Assinatura sem descontar investimento: ${custoAluguel.toFixed(2)}</p>
-            <div class="explanation">Valor total gasto em parcelas mensais do aluguel.</div>
-            <p>Valor Final Investimento Entrada: ${valorFuturoEntrada.toFixed(2)}</p>
-            <div class="explanation">Valor total que terá se investir o valor que daria de entrada no veículo financiado.Este valor é o valor total do equivalente da entrada do financiamento, investido uma única vez no inicio do contrato de aluguel</div>
-            <p>Valor Final Investimento Custos extras: ${retornoInvestimentoCustosExtras.toFixed(2)}</p>
-            <div class="explanation">Valor total que terá ao final do período se investir o valor que gastaria em ipva, 
-                licenciamento e manutenções do veículo comprado. Este valor é o valor total dividido por 12 e investido mensalmente</div>
-            <p>Valor Total Assinatura descontando investimento: ${(valorTotalAssinatura - valorFuturoEntrada).toFixed(2)}</p>
-            <div class="explanation">Valor que terá realmente pago em aluguel caso invista os valores acima.</div>
-            `;
+            <div class="results-container">
+                <div class="column">
+                    <div class="column-header">Compra</div>
+                    <p>Valor Total Compra Financiada: ${valorTotalCompra.toFixed(2)}</p>
+                    <div class="explanation">Valor pago pelo veículo somado dos custos anuais de IPVA, Licenciamento e manutenção, subtraído do valor de venda após o período.</div>
+                    <p>Valor Parcela Financiamento: ${valorParcela.toFixed(2)}</p>
+                    <div class="explanation">Valor mensal que será pago pelo financiamento.</div>
+                    <p>Valor Venda do veículo: ${valorVendaVeiculo.toFixed(2)}</p>
+                    <div class="explanation">Valor estimado de venda do veículo após o período de uso.</div>
+                </div>
+                
+                <div class="column">
+                    <div class="column-header">Assinatura</div>
+                    <p>Valor Total Assinatura sem descontar investimento: ${custoAluguel.toFixed(2)}</p>
+                    <div class="explanation">Valor total gasto em parcelas mensais do aluguel.</div>
+                    <p>Valor Total Assinatura descontando investimento: ${(valorTotalAssinatura - valorFuturoEntrada).toFixed(2)}</p>
+                    <div class="explanation">Valor que terá realmente pago em aluguel caso invista os valores acima.</div>
+                </div>
+                
+                <div class="column">
+                    <div class="column-header">Investimento</div>
+                    <p>Valor Final Investimento Entrada: ${valorFuturoEntrada.toFixed(2)}</p>
+                    <div class="explanation">Valor total que terá se investir o valor que daria de entrada no veículo financiado. Este valor é o equivalente da entrada do financiamento, investido uma única vez no início do contrato de aluguel.</div>
+                    <p>Valor Final Investimento Custos extras: ${retornoInvestimentoCustosExtras.toFixed(2)}</p>
+                    <div class="explanation">Valor total que terá ao final do período se investir o valor que gastaria em IPVA, licenciamento e manutenções do veículo comprado. Este valor é o total dividido por 12 e investido mensalmente.</div>
+                </div>
+            </div>
+        `;
     }
+
     // ... Outras funções de cálculo
     function calcularCustoTotalAluguel(valorMensal, periodos) {
         return valorMensal * periodos;
