@@ -184,7 +184,7 @@
                     <p>Valor Total Assinatura sem descontar investimento:</p> <p>${custoAluguel.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p>
                     <div class="explanation">Valor total gasto em parcelas mensais do aluguel.</div>
                     <p>Valor Total Assinatura descontando investimento:</p> <p>${(valorTotalAssinatura - (valorFuturoEntrada - valorEntrada) ).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p>
-                    <div class="explanation">Valor que terá realmente pago em aluguel caso invista os valores acima.</div>
+                    <div class="explanation">Valor que terá realmente pago em aluguel caso invista os valores acima.Valor Pago = Valor Mensalidades - (Custos Extras + juros custos extras)  - juros da entrada</div>
                 </div>
                 
                 <div class="column">
