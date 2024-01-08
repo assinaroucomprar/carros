@@ -185,6 +185,8 @@
                     <div class="explanation">Valor total gasto em parcelas mensais do aluguel.</div>
                     <p>Valor Total Assinatura descontando investimento:</p> <p>${(valorTotalAssinatura - (valorFuturoEntrada - valorEntrada) ).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p>
                     <div class="explanation">Valor que terá realmente pago em aluguel caso invista os valores acima.Valor Pago = Valor Mensalidades - (Custos Extras + juros custos extras)  - juros da entrada</div>
+                      Optando por invetir os custos extras, teremos o mesmo gasto mensal dos dois lados, só que de um deles o dinheiro vira pó e do outro resgato ao final do período. 
+                        Por isso a soma desse valor no caso do financiamento e a subtração dele no caso da assinatura.
                 </div>
                 
                 <div class="column">
